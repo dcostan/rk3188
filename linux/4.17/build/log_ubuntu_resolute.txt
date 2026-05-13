@@ -1,0 +1,999 @@
+In
+DDR3
+300MHz
+Bus Width=32 Col=10 Bank=8 Row=16 CS=1 Die Bus-Width=8 Size=2048MB
+Memory OK
+OUT
+
+
+barebox 2026.04.0-00114-g019d102038a6-dirty #16 Wed May 6 22:11:42 CEST 2026
+
+
+Board: Radxa Rock
+deep-probe: disabled in device tree
+arc-emac 10204000.ethernet@10204000.of: ARC EMAC detected with id: 0x7fd02
+mdio_bus: miibus0: probed
+dw_mmc 10214000.mmc@10214000.of: registered as mmc0
+mmc0: detected SD card version 1.0
+mmc0: registered mmc0
+netconsole: registered as netconsole-1
+gpiolib: invalid GPIO 58
+gpiolib: _gpio_request: gpio-58 (sda) status -19
+malloc space: 0x9fe80000 -> 0xdfcfffff (size 1022.5 MiB)
+envfs: no envfs (magic mismatch) - envfs never written?
+
+Hit any to stop autoboot:    0
+ext4 ext40: EXT2 rev 1, inode_size 256, descriptor size 32
+ext4 ext41: EXT2 rev 1, inode_size 256, descriptor size 32
+Booting entry 'Ubuntu (/mnt/mmc0.0/loader/entries/boot.conf)'
+blspec: booting Ubuntu from mmc0
+
+Loading ARM Linux zImage '/mnt/mmc0.0/rk3188-radxarock.img'
+commandline: console=ttyS2,115200 root=/dev/mmcblk0p2 rootdelay=3 rootfstype=ext4 rw clocksource=jiffies earlyprintk
+Uncompressing Linux... done, booting the kernel.
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.17.13 (matlin@matlin-PC) (gcc version 7.3.1 20180425 [linaro-7.3-2018.05 revision d29120a424ecfbc167ef90065c0eeb7f91977701] (Linaro GCC 7.3-2018.05)) #2 SMP Thu Aug 9 16:41:40 CEST 2018
+[    0.000000] CPU: ARMv7 Processor [413fc090] revision 0 (ARMv7), cr=10c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] OF: fdt: Machine model: Radxa Rock
+[    0.000000] bootconsole [earlycon0] enabled
+[    0.000000] Memory policy: Data cache writealloc
+[    0.000000] random: get_random_bytes called from start_kernel+0x9c/0x480 with crng_init=0
+[    0.000000] percpu: Embedded 17 pages/cpu @(ptrval) s40204 r8192 d21236 u69632
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 520256
+[    0.000000] Kernel command line: console=ttyS2,115200 root=/dev/mmcblk0p2 rootdelay=3 rootfstype=ext4 rw clocksource=jiffies earlyprintk
+[    0.000000] Dentry cache hash table entries: 262144 (order: 8, 1048576 bytes)
+[    0.000000] Inode-cache hash table entries: 131072 (order: 7, 524288 bytes)
+[    0.000000] Memory: 2063524K/2097152K available (8192K kernel code, 678K rwdata, 2104K rodata, 1024K init, 279K bss, 33628K reserved, 0K cma-reserved, 262144K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0xf0800000 - 0xff800000   ( 240 MB)
+[    0.000000]     lowmem  : 0x80000000 - 0xf0000000   (1792 MB)
+[    0.000000]     pkmap   : 0x7fe00000 - 0x80000000   (   2 MB)
+[    0.000000]     modules : 0x7f000000 - 0x7fe00000   (  14 MB)
+[    0.000000]       .text : 0x(ptrval) - 0x(ptrval)   (9184 kB)
+[    0.000000]       .init : 0x(ptrval) - 0x(ptrval)   (1024 kB)
+[    0.000000]       .data : 0x(ptrval) - 0x(ptrval)   ( 679 kB)
+[    0.000000]        .bss : 0x(ptrval) - 0x(ptrval)   ( 280 kB)
+[    0.000000] ftrace: allocating 27622 entries in 82 pages
+[    0.000000] Hierarchical RCU implementation.
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+[    0.000000] L2C-310 enabling early BRESP for Cortex-A9
+[    0.000000] L2C-310 full line of zeros enabled for Cortex-A9
+[    0.000000] L2C-310 dynamic clock gating enabled, standby mode enabled
+[    0.000000] L2C-310 cache controller enabled, 16 ways, 512 kB
+[    0.000000] L2C-310: CACHE_ID 0x4100c0c8, AUX_CTRL 0x46050001
+[    0.000000] clocksource: rk_timer: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+[    0.000009] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+[    0.009293] Console: colour dummy device 80x30
+[    0.014105] Calibrating delay loop... 1196.85 BogoMIPS (lpj=5984256)
+[    0.106213] pid_max: default: 32768 minimum: 301
+[    0.111330] Security Framework initialized
+[    0.115648] Yama: becoming mindful.
+[    0.119390] AppArmor: AppArmor disabled by boot time parameter
+[    0.125819] Mount-cache hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.133002] Mountpoint-cache hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.141720] CPU: Testing write buffer coherency: ok
+[    0.147400] CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[    0.153788] rockchip_smp_prepare_cpus: ncores 4
+[    0.159527] Setting up static identity map for 0x60100000 - 0x60100060
+[    0.166444] Hierarchical SRCU implementation.
+[    0.174658] smp: Bringing up secondary CPUs ...
+[    0.219451] CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+[    0.259449] CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+[    0.299452] CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+[    0.299641] smp: Brought up 1 node, 4 CPUs
+[    0.321239] SMP: Total of 4 processors activated (4787.40 BogoMIPS).
+[    0.327742] CPU: All CPU(s) started in SVC mode.
+[    0.334095] devtmpfs: initialized
+[    0.344444] VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+[    0.352695] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.362822] futex hash table entries: 1024 (order: 4, 65536 bytes)
+[    0.369660] pinctrl core: initialized pinctrl subsystem
+[    0.376528] NET: Registered protocol family 16
+[    0.382644] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.390215] audit: initializing netlink subsys (disabled)
+[    0.396020] audit: type=2000 audit(0.400:1): state=initialized audit_enabled=0 res=1
+[    0.404044] cpuidle: using governor ladder
+[    0.408288] cpuidle: using governor menu
+[    0.412718] Failed to find PMU node
+[    0.416494] hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+[    0.424715] hw-breakpoint: maximum watchpoint size is 4 bytes.
+[    0.431015] Serial: AMBA PL011 UART driver
+[    0.468780] SCSI subsystem initialized
+[    0.472994] usbcore: registered new interface driver usbfs
+[    0.478674] usbcore: registered new interface driver hub
+[    0.484258] usbcore: registered new device driver usb
+[    0.489904] media: Linux media interface: v0.10
+[    0.494589] Linux video capture interface: v2.00
+[    0.499407] pps_core: LinuxPPS API ver. 1 registered
+[    0.504530] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.513946] PTP clock support registered
+[    0.623203] VFS: Disk quotas dquot_6.6.0
+[    0.627337] VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[    0.648661] NET: Registered protocol family 2
+[    0.654077] tcp_listen_portaddr_hash hash table entries: 1024 (order: 1, 12288 bytes)
+[    0.662184] TCP established hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.669686] TCP bind hash table entries: 16384 (order: 5, 131072 bytes)
+[    0.676775] TCP: Hash tables configured (established 16384 bind 16384)
+[    0.683694] UDP hash table entries: 1024 (order: 3, 32768 bytes)
+[    0.690055] UDP-Lite hash table entries: 1024 (order: 3, 32768 bytes)
+[    0.697137] NET: Registered protocol family 1
+[    0.707129] Initialise system trusted keyrings
+[    0.712013] workingset: timestamp_bits=14 max_order=19 bucket_order=5
+[    0.718898] zbud: loaded
+[    5.519830] Key type asymmetric registered
+[    5.524055] Asymmetric key parser 'x509' registered
+[    5.529118] bounce: pool size: 64 pages
+[    5.533166] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 247)
+[    5.541017] io scheduler noop registered
+[    5.545040] io scheduler deadline registered (default)
+[    5.550411] io scheduler cfq registered
+[    5.554378] io scheduler mq-deadline registered (default)
+[    5.559904] io scheduler kyber registered
+[    5.569414] dma-pl330 20018000.dma-controller: Loaded driver for PL330 DMAC-241330
+[    5.577223] dma-pl330 20018000.dma-controller: 	DBUFF-32x8bytes Num_Chans-6 Num_Peri-12 Num_Events-12
+[    5.589033] dma-pl330 20078000.dma-controller: Loaded driver for PL330 DMAC-241330
+[    5.596811] dma-pl330 20078000.dma-controller: 	DBUFF-64x8bytes Num_Chans-7 Num_Peri-20 Num_Events-14
+[    5.607089] Serial: 8250/16550 driver, 4 ports, IRQ sharing disabled
+[    5.615702] 10124000.serial: ttyS0 at MMIO 0x10124000 (irq = 26, base_baud = 1500000) is a 16550A
+[    5.645845] 10126000.serial: ttyS1 at MMIO 0x10126000 (irq = 27, base_baud = 1500000) is a 16550A
+[    5.676009] 20064000.serial: ttyS2 at MMIO 0x20064000 (irq = 34, base_baud = 1500000) is a 16550A
+[    5.685294] console [ttyS2] enabled
+[    5.685294] console [ttyS2] enabled
+[    5.693108] bootconsole [earlycon0] disabled
+[    5.693108] bootconsole [earlycon0] disabled
+[    5.723661] 20068000.serial: ttyS3 at MMIO 0x20068000 (irq = 35, base_baud = 1500000) is a 16550A
+[    5.734436] Serial: AMBA driver
+[    5.739731] libphy: Fixed MDIO Bus: probed
+[    5.744568] dwc2 10180000.usb: 10180000.usb supply vusb_d not found, using dummy regulator
+[    5.753964] dwc2 10180000.usb: 10180000.usb supply vusb_a not found, using dummy regulator
+[    5.763438] dwc2 10180000.usb: Configuration mismatch. dr_mode forced to host
+[    5.879484] dwc2 10180000.usb: dwc2_check_params: Invalid parameter lpm=1
+[    5.887083] dwc2 10180000.usb: dwc2_check_params: Invalid parameter lpm_clock_gating=1
+[    5.895963] dwc2 10180000.usb: dwc2_check_params: Invalid parameter besl=1
+[    5.903676] dwc2 10180000.usb: dwc2_check_params: Invalid parameter hird_threshold_en=1
+[    5.912779] dwc2 10180000.usb: DWC OTG Controller
+[    5.918067] dwc2 10180000.usb: new USB bus registered, assigned bus number 1
+[    5.926022] dwc2 10180000.usb: irq 28, io mem 0x10180000
+[    5.932401] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 4.17
+[    5.941681] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    5.949782] usb usb1: Product: DWC OTG Controller
+[    5.955045] usb usb1: Manufacturer: Linux 4.17.13 dwc2_hsotg
+[    5.961392] usb usb1: SerialNumber: 10180000.usb
+[    5.967338] hub 1-0:1.0: USB hub found
+[    5.971643] hub 1-0:1.0: 1 port detected
+[    5.976876] dwc2 101c0000.usb: 101c0000.usb supply vusb_d not found, using dummy regulator
+[    5.986253] dwc2 101c0000.usb: 101c0000.usb supply vusb_a not found, using dummy regulator
+[    6.059487] dwc2 101c0000.usb: dwc2_check_params: Invalid parameter lpm=1
+[    6.067079] dwc2 101c0000.usb: dwc2_check_params: Invalid parameter lpm_clock_gating=1
+[    6.075981] dwc2 101c0000.usb: dwc2_check_params: Invalid parameter besl=1
+[    6.083704] dwc2 101c0000.usb: dwc2_check_params: Invalid parameter hird_threshold_en=1
+[    6.092811] dwc2 101c0000.usb: DWC OTG Controller
+[    6.098106] dwc2 101c0000.usb: new USB bus registered, assigned bus number 2
+[    6.106055] dwc2 101c0000.usb: irq 29, io mem 0x101c0000
+[    6.112728] usb usb2: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 4.17
+[    6.122003] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    6.130105] usb usb2: Product: DWC OTG Controller
+[    6.135368] usb usb2: Manufacturer: Linux 4.17.13 dwc2_hsotg
+[    6.141718] usb usb2: SerialNumber: 101c0000.usb
+[    6.147634] hub 2-0:1.0: USB hub found
+[    6.151936] hub 2-0:1.0: 1 port detected
+[    6.158242] usbcore: registered new interface driver usb-storage
+[    6.165433] mousedev: PS/2 mouse device common for all mice
+[    6.174417] rtc-hym8563 1-0051: no valid clock/calendar values available
+[    6.182220] rtc-hym8563 1-0051: rtc core: registered hym8563 as rtc0
+[    6.190763] REG1: supplied by vsys
+[    6.195512] REG2: supplied by vsys
+[    6.200225] REG3: supplied by vsys
+[    6.205077] REG4: supplied by vsys
+[    6.209247] VCC_IO: Bringing 3000000uV into 3300000-3300000uV
+[    6.216945] REG5: supplied by VCC_IO
+[    6.222028] REG6: supplied by VCC_IO
+[    6.226522] VDD_HDMI: Bringing 1200000uV into 2500000-2500000uV
+[    6.234531] REG7: supplied by VCC_IO
+[    6.239680] REG8: supplied by vsys
+[    6.244499] REG9: supplied by vsys
+[    6.249063] REG10: supplied by vsys
+[    6.254014] REG11: supplied by vsys
+[    6.258810] REG12: supplied by vsys
+[    6.263926] rk3x-i2c 2002f000.i2c: Initialized RK3xxx I2C bus at (ptrval)
+[    6.276920] sdhci: Secure Digital Host Controller Interface driver
+[    6.283828] sdhci: Copyright(c) Pierre Ossman
+[    6.288726] Synopsys Designware Multimedia Card Interface Driver
+[    6.296697] dwmmc_rockchip 10214000.dwmmc: Using external DMA controller.
+[    6.304299] dwmmc_rockchip 10214000.dwmmc: Version ID is 240a
+[    6.310771] dwmmc_rockchip 10214000.dwmmc: DW MMC controller at irq 31,32 bit host data width,256 deep fifo
+[    6.321697] sdmmc-supply: supplied by VCC_IO
+[    6.456680] mmc_host mmc0: Bus speed (slot 0) = 37500000Hz (slot req 400000Hz, actual 398936HZ div = 47)
+[    6.476805] sdhci-pltfm: SDHCI platform and OF driver helper
+[    6.483836] ledtrig-cpu: registered to indicate activity on CPUs
+[    6.490630] hidraw: raw HID events driver (C) Jiri Kosina
+[    6.496931] usbcore: registered new interface driver usbhid
+[    6.503154] usbhid: USB HID core driver
+[    6.507904] NET: Registered protocol family 10
+[    6.513491] Segment Routing with IPv6
+[    6.517671] mip6: Mobile IPv6
+[    6.520987] NET: Registered protocol family 17
+[    6.525954] mpls_gso: MPLS GSO support
+[    6.530237] ThumbEE CPU extension supported.
+[    6.535007] Registering SWP/SWPB emulation handler
+[    6.540907] registered taskstats version 1
+[    6.545484] Loading compiled-in X.509 certificates
+[    6.550909] zswap: loaded using pool lzo/zbud
+[    6.562861] input: gpio-keys as /devices/platform/gpio-keys/input/input0
+[    6.570521] rtc-hym8563 1-0051: no valid clock/calendar values available
+[    6.578024] rtc-hym8563 1-0051: hctosys: unable to read the hardware clock
+[    6.586047] random: fast init done
+[    6.590315] Waiting 3 sec before mounting root device...
+[    6.616054] mmc_host mmc0: Bus speed (slot 0) = 37500000Hz (slot req 50000000Hz, actual 37500000HZ div = 0)
+[    6.627006] mmc0: new high speed SDHC card at address 0007
+[    6.633865] mmcblk0: mmc0:0007 SD32G 28.8 GiB 
+[    6.641057]  mmcblk0: p1 p2
+[    9.720090] EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Opts: (null)
+[    9.729200] VFS: Mounted root (ext4 filesystem) on device 179:2.
+[    9.738131] Freeing unused kernel memory: 1024K
+[   10.393810] systemd[1]: System time advanced to built-in epoch: Wed 2026-04-15 18:32:53 UTC
+[   10.810094] systemd[1]: Failed to find module 'autofs4'
+[   10.826791] systemd[1]: Unable to determine whether tmpfs supports 'usrquota' mount option, assuming not: Function not implemented
+[   10.841300] systemd[1]: Failed to determine whether cgroupfs supports 'memory_recursiveprot' mount option, assuming not: Function not implemented
+[   10.855913] systemd[1]: Failed to determine whether cgroupfs supports 'memory_hugetlb_accounting' mount option, assuming not: Function not implemented
+[   10.880660] random: systemd: uninitialized urandom read (16 bytes read)
+                                                                               ^[   11.286760] systemd[1]: systemd 259.5-0ubuntu3 running in system mode (+PAM +AUDIT +SELINUX +APPARMOR +IMA +IPE +SMACK +SECCOMP +GCRYPT -GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +KMOD +LIBCRYPTSETUP +LIBCRYPTSETUP_PLUGINS +LIBFDISK +PCRE2 +PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD -BPF_FRAMEWORK -BTF -XKBCOMMON -UTMP +SYSVINIT +LIBARCHIVE)
+[   11.324426] systemd[1]: Detected architecture arm.
+[   11.331711] systemd[1]: Warning! Reported kernel version 4.17.13 is older than systemd's required baseline kernel version 5.7. Your mileage may vary.
+
+Welcome to Ubuntu 26.04 LTS!
+
+[   11.408840] systemd[1]: Hostname set to <matlin-PC>.
+[   11.489548] random: systemd: uninitialized urandom read (8 bytes read)
+[   11.525842] random: (sd-gens): uninitialized urandom read (16 bytes read)
+[   12.010142] urandom_read: 5 callbacks suppressed
+[   12.010146] random: systemd: uninitialized urandom read (16 bytes read)
+[   12.035007] random: systemd: uninitialized urandom read (16 bytes read)
+[   12.658092] systemd[1]: Queued start job for default target graphical.target.
+[   13.632439] systemd[1]: Created slice system-modprobe.slice - Slice /system/modprobe.
+[  OK  ] Created slice system-modprobe.slice - Slice /system/modprobe.
+[   13.696273] systemd[1]: Created slice system-serial\x2dgetty.slice - Slice /system/serial-getty.
+[  OK  ] Created slice system-serial\x2dget…slice - Slice /system/serial-getty.
+[   13.755691] systemd[1]: Created slice user.slice - User and Session Slice.
+[  OK  ] Created slice user.slice - User and Session Slice.
+[   13.807252] systemd[1]: Started systemd-ask-password-console.path - Dispatch Password Requests to Console Directory Watch.
+[  OK  ] Started systemd-ask-password-conso…equests to Console Directory Watch.
+[   13.867040] systemd[1]: Started systemd-ask-password-wall.path - Forward Password Requests to Wall Directory Watch.
+[  OK  ] Started systemd-ask-password-wall.…d Requests to Wall Directory Watch.
+[   13.927092] systemd[1]: Starting of proc-sys-fs-binfmt_misc.automount - Arbitrary Executable File Formats File System Automount Point unsupported.
+[UNSUPP] Starting of proc-sys-fs-binfmt_mis…System Automount Point unsupported.
+[   13.986846] systemd[1]: Expecting device dev-ttyS2.device - /dev/ttyS2...
+         Expecting device dev-ttyS2.device - /dev/ttyS2...
+[   14.026870] systemd[1]: Reached target cryptsetup.target - Local Encrypted Volumes.
+[  OK  ] Reached target cryptsetup.target - Local Encrypted Volumes.
+[   14.076891] systemd[1]: Reached target imports.target - Image Downloads.
+[  OK  ] Reached target imports.target - Image Downloads.
+[   14.126875] systemd[1]: Reached target integritysetup.target - Local Integrity Protected Volumes.
+[  OK  ] Reached target integritysetup.targ… Local Integrity Protected Volumes.
+[   14.176907] systemd[1]: Reached target paths.target - Path Units.
+[  OK  ] Reached target paths.target - Path Units.
+[   14.226855] systemd[1]: Reached target remote-fs.target - Remote File Systems.
+[  OK  ] Reached target remote-fs.target - Remote File Systems.
+[   14.266873] systemd[1]: Reached target slices.target - Slice Units.
+[  OK  ] Reached target slices.target - Slice Units.
+[   14.316871] systemd[1]: Reached target swap.target - Swaps.
+[  OK  ] Reached target swap.target - Swaps.
+[   14.366892] systemd[1]: Reached target veritysetup.target - Local Verity Protected Volumes.
+[  OK  ] Reached target veritysetup.target - Local Verity Protected Volumes.
+[   14.417375] systemd[1]: Listening on syslog.socket - Syslog Socket.
+[  OK  ] Listening on syslog.socket - Syslog Socket.
+[   14.476024] systemd[1]: Listening on systemd-ask-password.socket - Query the User Interactively for a Password.
+[  OK  ] Listening on systemd-ask-password.… User Interactively for a Password.
+[   14.542955] systemd[1]: Listening on systemd-creds.socket - Credential Encryption/Decryption.
+[  OK  ] Listening on systemd-creds.socket - Credential Encryption/Decryption.
+[   14.605455] systemd[1]: Listening on systemd-factory-reset.socket - Factory Reset Management.
+[  OK  ] Listening on systemd-factory-reset.socket - Factory Reset Management.
+[   14.657318] systemd[1]: Listening on systemd-journald-dev-log.socket - Journal Socket (/dev/log).
+[  OK  ] Listening on systemd-journald-dev-…socket - Journal Socket (/dev/log).
+[   14.717345] systemd[1]: Listening on systemd-journald.socket - Journal Sockets.
+[  OK  ] Listening on systemd-journald.socket - Journal Sockets.
+[   14.817013] systemd[1]: Listening on systemd-mute-console.socket - Console Output Muting Service Socket.
+[  OK  ] Listening on systemd-mute-console.…nsole Output Muting Service Socket.
+[   14.876923] systemd[1]: systemd-pcrextend.socket - TPM PCR Measurements skipped, unmet condition check ConditionSecurity=measured-uki
+[   14.890483] systemd[1]: systemd-pcrlock.socket - Make TPM PCR Policy skipped, unmet condition check ConditionSecurity=measured-uki
+[   14.904169] systemd[1]: Listening on systemd-udevd-control.socket - udev Control Socket.
+[  OK  ] Listening on systemd-udevd-control.socket - udev Control Socket.
+[   14.957130] systemd[1]: Listening on systemd-udevd-kernel.socket - udev Kernel Socket.
+[  OK  ] Listening on systemd-udevd-kernel.socket - udev Kernel Socket.
+[   15.007245] systemd[1]: Listening on systemd-udevd-varlink.socket - udev Varlink Socket.
+[  OK  ] Listening on systemd-udevd-varlink.socket - udev Varlink Socket.
+[   15.057332] systemd[1]: dev-hugepages.mount - Huge Pages File System skipped, unmet condition check ConditionPathExists=/sys/kernel/mm/hugepages
+[   15.081651] systemd[1]: dev-mqueue.mount: Failed to spawn executor: Function not implemented
+[   15.091206] systemd[1]: dev-mqueue.mount: Failed to spawn 'mount' task: Function not implemented
+[   15.101096] systemd[1]: dev-mqueue.mount: Failed with result 'resources'.
+[   15.117075] systemd[1]: Failed to mount dev-mqueue.mount - POSIX Message Queue File System.
+[FAILED] Failed to mount dev-mqueue.mount - POSIX Message Queue File System.
+See 'systemctl status dev-mqueue.mount' for details.
+[   15.231672] systemd[1]: sys-kernel-debug.mount: Failed to spawn executor: Function not implemented
+[   15.241886] systemd[1]: sys-kernel-debug.mount: Failed to spawn 'mount' task: Function not implemented
+[   15.252329] systemd[1]: sys-kernel-debug.mount: Failed with result 'resources'.
+[   15.268847] systemd[1]: Failed to mount sys-kernel-debug.mount - Kernel Debug File System.
+[FAILED] Failed to mount sys-kernel-debug.mount - Kernel Debug File System.
+See 'systemctl status sys-kernel-debug.mount' for details.
+[   15.391627] systemd[1]: sys-kernel-tracing.mount: Failed to spawn executor: Function not implemented
+[   15.402027] systemd[1]: sys-kernel-tracing.mount: Failed to spawn 'mount' task: Function not implemented
+[   15.412668] systemd[1]: sys-kernel-tracing.mount: Failed with result 'resources'.
+[   15.429452] systemd[1]: Failed to mount sys-kernel-tracing.mount - Kernel Trace File System.
+[FAILED] Failed to mount sys-kernel-tracing.mount - Kernel Trace File System.
+See 'systemctl status sys-kernel-tracing.mount' for details.
+[   15.544603] systemd[1]: tmp.mount: x-systemd.graceful-option=usrquota specified, but cannot determine availability, suppressing: Function not implemented
+[   15.569840] systemd[1]: tmp.mount: Failed to spawn executor: Function not implemented
+[   15.578776] systemd[1]: tmp.mount: Failed to spawn 'mount' task: Function not implemented
+[   15.587950] systemd[1]: tmp.mount: Failed with result 'resources'.
+[   15.603216] systemd[1]: Failed to mount tmp.mount - Temporary Directory /tmp.
+[FAILED] Failed to mount tmp.mount - Temporary Directory /tmp.
+See 'systemctl status tmp.mount' for details.
+[   15.703272] systemd[1]: systemd-journald.service: unit configures an IP firewall, but the local system does not support BPF/cgroup firewalling.
+[   15.717714] systemd[1]: systemd-journald.service: (This warning is only shown for the first unit using IP firewalling.)
+[   15.739632] systemd[1]: systemd-journald.service: Failed to spawn executor: Function not implemented
+[   15.750088] systemd[1]: systemd-journald.service: Failed to spawn 'start' task: Function not implemented
+[   15.761205] systemd[1]: systemd-journald.service: Failed with result 'resources'.
+[   15.777862] systemd[1]: Failed to start systemd-journald.service - Journal Service.
+[FAILED] Failed to start systemd-journald.service - Journal Service.
+See 'systemctl status systemd-journald.service' for details.
+[   15.884530] systemd[1]: keyboard-setup.service: Failed to spawn executor: Function not implemented
+[   15.894733] systemd[1]: keyboard-setup.service: Failed to spawn 'start' task: Function not implemented
+[   15.905647] systemd[1]: keyboard-setup.service: Failed with result 'resources'.
+[   15.922166] systemd[1]: Failed to start keyboard-setup.service - Set the console keyboard layout.
+[FAILED] Failed to start keyboard-setup.ser… - Set the console keyboard layout.
+See 'systemctl status keyboard-setup.service' for details.
+[   16.032050] systemd[1]: kmod-static-nodes.service - Create List of Static Device Nodes skipped, unmet condition check ConditionFileNotEmpty=/lib/modules/4.17.13/modules.devname
+[   16.060324] systemd[1]: modprobe@configfs.service: Failed to spawn executor: Function not implemented
+[   16.070822] systemd[1]: modprobe@configfs.service: Failed to spawn 'start' task: Function not implemented
+[   16.082052] systemd[1]: modprobe@configfs.service: Failed with result 'resources'.
+[   16.098900] systemd[1]: Failed to start modprobe@configfs.service - Load Kernel Module configfs.
+[FAILED] Failed to start modprobe@configfs.…vice - Load Kernel Module configfs.
+See 'systemctl status modprobe@configfs.service' for details.
+[   16.196785] systemd[1]: Dependency failed for sys-kernel-config.mount - Kernel Configuration File System.
+[DEPEND] Dependency failed for sys-kernel-c…- Kernel Configuration File System.
+[   16.256760] systemd[1]: sys-kernel-config.mount: Job sys-kernel-config.mount/start failed with result 'dependency'.
+[   16.299608] systemd[1]: modprobe@drm.service: Failed to spawn executor: Function not implemented
+[   16.309557] systemd[1]: modprobe@drm.service: Failed to spawn 'start' task: Function not implemented
+[   16.320280] systemd[1]: modprobe@drm.service: Failed with result 'resources'.
+[   16.336395] systemd[1]: Failed to start modprobe@drm.service - Load Kernel Module drm.
+[FAILED] Failed to start modprobe@drm.service - Load Kernel Module drm.
+See 'systemctl status modprobe@drm.service' for details.
+[   16.442472] systemd[1]: modprobe@efi_pstore.service: Failed to spawn executor: Function not implemented
+[   16.453097] systemd[1]: modprobe@efi_pstore.service: Failed to spawn 'start' task: Function not implemented
+[   16.464499] systemd[1]: modprobe@efi_pstore.service: Failed with result 'resources'.
+[   16.481440] systemd[1]: Failed to start modprobe@efi_pstore.service - Load Kernel Module efi_pstore.
+[FAILED] Failed to start modprobe@efi_pstor…ce - Load Kernel Module efi_pstore.
+See 'systemctl status modprobe@efi_pstore.service' for details.
+[   16.602320] systemd[1]: modprobe@fuse.service: Failed to spawn executor: Function not implemented
+[   16.612448] systemd[1]: modprobe@fuse.service: Failed to spawn 'start' task: Function not implemented
+[   16.623276] systemd[1]: modprobe@fuse.service: Failed with result 'resources'.
+[   16.639624] systemd[1]: Failed to start modprobe@fuse.service - Load Kernel Module fuse.
+[FAILED] Failed to start modprobe@fuse.service - Load Kernel Module fuse.
+See 'systemctl status modprobe@fuse.service' for details.
+[   16.716790] systemd[1]: Dependency failed for sys-fs-fuse-connections.mount - FUSE Control File System.
+[DEPEND] Dependency failed for sys-fs-fuse-…s.mount - FUSE Control File System.
+[   16.766754] systemd[1]: sys-fs-fuse-connections.mount: Job sys-fs-fuse-connections.mount/start failed with result 'dependency'.
+[   16.795077] systemd[1]: systemd-hibernate-clear.service - Clear Stale Hibernate Storage Info skipped, unmet condition check ConditionPathExists=/sys/firmware/efi/efivars/HibernateLocation-8cf2644b-4b0b-428f-9387-6d876050dc67
+[   16.830305] systemd[1]: systemd-modules-load.service: Failed to spawn executor: Function not implemented
+[   16.841103] systemd[1]: systemd-modules-load.service: Failed to spawn 'start' task: Function not implemented
+[   16.852607] systemd[1]: systemd-modules-load.service: Failed with result 'resources'.
+[   16.869673] systemd[1]: Failed to start systemd-modules-load.service - Load Kernel Modules.
+[FAILED] Failed to start systemd-modules-load.service - Load Kernel Modules.
+See 'systemctl status systemd-modules-load.service' for details.
+[   16.982071] systemd[1]: systemd-pcrmachine.service - TPM PCR Machine ID Measurement skipped, unmet condition check ConditionSecurity=measured-uki
+[   16.997035] systemd[1]: systemd-pcrproduct.service - TPM NvPCR Product ID Measurement skipped, unmet condition check ConditionSecurity=measured-uki
+[   17.021968] systemd[1]: systemd-remount-fs.service: Failed to spawn executor: Function not implemented
+[   17.032504] systemd[1]: systemd-remount-fs.service: Failed to spawn 'start' task: Function not implemented
+[   17.043800] systemd[1]: systemd-remount-fs.service: Failed with result 'resources'.
+[   17.060677] systemd[1]: Failed to start systemd-remount-fs.service - Remount Root and Kernel File Systems.
+[FAILED] Failed to start systemd-remount-fs…mount Root and Kernel File Systems.
+See 'systemctl status systemd-remount-fs.service' for details.
+[   17.185010] systemd[1]: systemd-hwdb-update.service - Rebuild Hardware Database skipped, no trigger condition checks were met.
+[   17.207859] systemd[1]: systemd-journal-flush.service: Failed to spawn executor: Function not implemented
+[   17.218686] systemd[1]: systemd-journal-flush.service: Failed to spawn 'start' task: Function not implemented
+[   17.230281] systemd[1]: systemd-journal-flush.service: Failed with result 'resources'.
+[   17.247364] systemd[1]: Failed to start systemd-journal-flush.service - Flush Journal to Persistent Storage.
+[FAILED] Failed to start systemd-journal-fl…lush Journal to Persistent Storage.
+See 'systemctl status systemd-journal-flush.service' for details.
+[   17.362024] systemd[1]: systemd-pstore.service - Platform Persistent Storage Archival skipped, unmet condition check ConditionDirectoryNotEmpty=/sys/fs/pstore
+[   17.388084] systemd[1]: systemd-random-seed.service: Failed to spawn executor: Function not implemented
+[   17.398711] systemd[1]: systemd-random-seed.service: Failed to spawn 'start' task: Function not implemented
+[   17.410101] systemd[1]: systemd-random-seed.service: Failed with result 'resources'.
+[   17.426999] systemd[1]: Failed to start systemd-random-seed.service - Load/Save OS Random Seed.
+[FAILED] Failed to start systemd-random-see…service - Load/Save OS Random Seed.
+See 'systemctl status systemd-random-seed.service' for details.
+[   17.532014] systemd[1]: systemd-sysctl.service: Failed to spawn executor: Function not implemented
+[   17.542162] systemd[1]: systemd-sysctl.service: Failed to spawn 'start' task: Function not implemented
+[   17.553076] systemd[1]: systemd-sysctl.service: Failed with result 'resources'.
+[   17.569490] systemd[1]: Failed to start systemd-sysctl.service - Apply Kernel Variables.
+[FAILED] Failed to start systemd-sysctl.service - Apply Kernel Variables.
+See 'systemctl status systemd-sysctl.service' for details.
+[   17.682006] systemd[1]: systemd-tmpfiles-setup-dev-early.service: Failed to spawn executor: Function not implemented
+[   17.693966] systemd[1]: systemd-tmpfiles-setup-dev-early.service: Failed to spawn 'start' task: Function not implemented
+[   17.706641] systemd[1]: systemd-tmpfiles-setup-dev-early.service: Failed with result 'resources'.
+[   17.724802] systemd[1]: Failed to start systemd-tmpfiles-setup-dev-early.service - Create Static Device Nodes in /dev gracefully.
+[FAILED] Failed to start systemd-tmpfiles-s…ic Device Nodes in /dev gracefully.
+See 'systemctl status systemd-tmpfiles-setup-dev-early.service' for details.
+[   17.852114] systemd[1]: systemd-sysusers.service: Failed to spawn executor: Function not implemented
+[   17.862533] systemd[1]: systemd-sysusers.service: Failed to spawn 'start' task: Function not implemented
+[   17.873639] systemd[1]: systemd-sysusers.service: Failed with result 'resources'.
+[   17.890278] systemd[1]: Failed to start systemd-sysusers.service - Create System Users.
+[FAILED] Failed to start systemd-sysusers.service - Create System Users.
+See 'systemctl status systemd-sysusers.service' for details.
+[   18.019611] systemd[1]: systemd-tmpfiles-setup-dev.service: Failed to spawn executor: Function not implemented
+[   18.030983] systemd[1]: systemd-tmpfiles-setup-dev.service: Failed to spawn 'start' task: Function not implemented
+[   18.043061] systemd[1]: systemd-tmpfiles-setup-dev.service: Failed with result 'resources'.
+[   18.060673] systemd[1]: Failed to start systemd-tmpfiles-setup-dev.service - Create Static Device Nodes in /dev.
+[FAILED] Failed to start systemd-tmpfiles-s…Create Static Device Nodes in /dev.
+See 'systemctl status systemd-tmpfiles-setup-dev.service' for details.
+[   18.172111] systemd[1]: Reached target local-fs-pre.target - Preparation for Local File Systems.
+[  OK  ] Reached target local-fs-pre.target…Preparation for Local File Systems.
+[   18.216993] systemd[1]: Reached target local-fs.target - Local File Systems.
+[  OK  ] Reached target local-fs.target - Local File Systems.
+[   18.273698] systemd[1]: Listening on systemd-sysext.socket - System Extension Image Management.
+[  OK  ] Listening on systemd-sysext.socket… System Extension Image Management.
+[   18.336877] systemd[1]: console-setup.service: Failed to spawn executor: Function not implemented
+[   18.346903] systemd[1]: console-setup.service: Failed to spawn 'start' task: Function not implemented
+[   18.357710] systemd[1]: console-setup.service: Failed with result 'resources'.
+[   18.373965] systemd[1]: Failed to start console-setup.service - Set console font and keymap.
+[FAILED] Failed to start console-setup.service - Set console font and keymap.
+See 'systemctl status console-setup.service' for details.
+[   18.471938] systemd[1]: netplan-configure.service: Failed to spawn executor: Function not implemented
+[   18.482453] systemd[1]: netplan-configure.service: Failed to spawn 'start' task: Function not implemented
+[   18.493676] systemd[1]: netplan-configure.service: Failed with result 'resources'.
+[   18.510452] systemd[1]: Failed to start netplan-configure.service - Netplan Backend Configuration.
+[FAILED] Failed to start netplan-configure.…ce - Netplan Backend Configuration.
+See 'systemctl status netplan-configure.service' for details.
+[   18.624157] systemd[1]: systemd-binfmt.service - Set Up Additional Binary Formats skipped, unmet condition check ConditionPathIsMountPoint=/proc/sys/fs/binfmt_misc
+[   18.650728] systemd[1]: systemd-tmpfiles-setup.service: Failed to spawn executor: Function not implemented
+[   18.661715] systemd[1]: systemd-tmpfiles-setup.service: Failed to spawn 'start' task: Function not implemented
+[   18.673411] systemd[1]: systemd-tmpfiles-setup.service: Failed with result 'resources'.
+[   18.690718] systemd[1]: Failed to start systemd-tmpfiles-setup.service - Create System Files and Directories.
+[FAILED] Failed to start systemd-tmpfiles-s…reate System Files and Directories.
+See 'systemctl status systemd-tmpfiles-setup.service' for details.
+[   18.812228] systemd[1]: ldconfig.service: Failed to spawn executor: Function not implemented
+[   18.821807] systemd[1]: ldconfig.service: Failed to spawn 'start' task: Function not implemented
+[   18.832125] systemd[1]: ldconfig.service: Failed with result 'resources'.
+[   18.847984] systemd[1]: Failed to start ldconfig.service - Rebuild Dynamic Linker Cache.
+[FAILED] Failed to start ldconfig.service - Rebuild Dynamic Linker Cache.
+See 'systemctl status ldconfig.service' for details.
+[   18.942071] systemd[1]: systemd-firstboot.service - Initial Setup skipped, unmet condition check ConditionFirstBoot=yes
+[   18.954342] systemd[1]: first-boot-complete.target - First Boot Complete skipped, unmet condition check ConditionFirstBoot=yes
+[   18.977463] systemd[1]: systemd-journal-catalog-update.service: Failed to spawn executor: Function not implemented
+[   18.989196] systemd[1]: systemd-journal-catalog-update.service: Failed to spawn 'start' task: Function not implemented
+[   19.001670] systemd[1]: systemd-journal-catalog-update.service: Failed with result 'resources'.
+[   19.019683] systemd[1]: Failed to start systemd-journal-catalog-update.service - Rebuild Journal Catalog.
+[FAILED] Failed to start systemd-journal-ca….service - Rebuild Journal Catalog.
+See 'systemctl status systemd-journal-catalog-update.service' for details.
+[   19.132138] systemd[1]: systemd-machine-id-commit.service - Save Transient machine-id to Disk skipped, unmet condition check ConditionPathIsMountPoint=/etc/machine-id
+[   19.149006] systemd[1]: systemd-tpm2-setup-early.service - Early TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+[   19.163289] systemd[1]: systemd-tpm2-setup.service - TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+[   19.176423] systemd[1]: systemd-pcrnvdone.service - TPM PCR NvPCR Initialization Separator skipped, unmet condition check ConditionSecurity=measured-uki
+[   19.201750] systemd[1]: systemd-udev-load-credentials.service: Failed to spawn executor: Function not implemented
+[   19.213361] systemd[1]: systemd-udev-load-credentials.service: Failed to spawn 'start' task: Function not implemented
+[   19.225726] systemd[1]: systemd-udev-load-credentials.service: Failed with result 'resources'.
+[   19.243585] systemd[1]: Failed to start systemd-udev-load-credentials.service - Load udev Rules from Credentials.
+[FAILED] Failed to start systemd-udev-load-…- Load udev Rules from Credentials.
+See 'systemctl status systemd-udev-load-credentials.service' for details.
+[   19.361970] systemd[1]: systemd-udev-trigger.service: Failed to spawn executor: Function not implemented
+[   19.372760] systemd[1]: systemd-udev-trigger.service: Failed to spawn 'start' task: Function not implemented
+[   19.384266] systemd[1]: systemd-udev-trigger.service: Failed with result 'resources'.
+[   19.401299] systemd[1]: Failed to start systemd-udev-trigger.service - Coldplug All udev Devices.
+[FAILED] Failed to start systemd-udev-trigg…ervice - Coldplug All udev Devices.
+See 'systemctl status systemd-udev-trigger.service' for details.
+[   19.512542] systemd[1]: systemd-udevd.service: Failed to spawn executor: Function not implemented
+[   19.522619] systemd[1]: systemd-udevd.service: Failed to spawn 'start' task: Function not implemented
+[   19.533349] systemd[1]: systemd-udevd.service: Failed with result 'resources'.
+[   19.549678] systemd[1]: Failed to start systemd-udevd.service - Rule-based Manager for Device Events and Files.
+[FAILED] Failed to start systemd-udevd.serv…anager for Device Events and Files.
+See 'systemctl status systemd-udevd.service' for details.
+[   19.672455] systemd[1]: systemd-update-done.service: Failed to spawn executor: Function not implemented
+[   19.683085] systemd[1]: systemd-update-done.service: Failed to spawn 'start' task: Function not implemented
+[   19.694512] systemd[1]: systemd-update-done.service: Failed with result 'resources'.
+[   19.711480] systemd[1]: Failed to start systemd-update-done.service - Update is Completed.
+[FAILED] Failed to start systemd-update-done.service - Update is Completed.
+See 'systemctl status systemd-update-done.service' for details.
+[   19.886989] random: crng init done
+[   20.330540] systemd[1]: Reached target sysinit.target - System Initialization.
+[  OK  ] Reached target sysinit.target - System Initialization.
+[   20.379163] systemd[1]: Started apt-daily.timer - Daily apt download activities.
+[  OK  ] Started apt-daily.timer - Daily apt download activities.
+[   20.427093] systemd[1]: Started apt-daily-upgrade.timer - Daily apt upgrade and clean activities.
+[  OK  ] Started apt-daily-upgrade.timer - …y apt upgrade and clean activities.
+[   20.477033] systemd[1]: Started dpkg-db-backup.timer - Daily dpkg database backup timer.
+[  OK  ] Started dpkg-db-backup.timer - Daily dpkg database backup timer.
+[   20.527115] systemd[1]: Started e2scrub_all.timer - Periodic ext4 Online Metadata Check for All Filesystems.
+[  OK  ] Started e2scrub_all.timer - Period…Metadata Check for All Filesystems.
+[   20.577196] systemd[1]: Started fstrim.timer - Discard unused filesystem blocks once a week.
+[  OK  ] Started fstrim.timer - Discard unused filesystem blocks once a week.
+[   20.627027] systemd[1]: Started logrotate.timer - Daily rotation of log files.
+[  OK  ] Started logrotate.timer - Daily rotation of log files.
+[   20.677020] systemd[1]: Started motd-news.timer - Message of the Day.
+[  OK  ] Started motd-news.timer - Message of the Day.
+[   20.726868] systemd[1]: Started systemd-tmpfiles-clean.timer - Daily Cleanup of Temporary Directories.
+[  OK  ] Started systemd-tmpfiles-clean.tim…y Cleanup of Temporary Directories.
+[   20.787341] systemd[1]: ua-timer.timer - Ubuntu Pro Timer for running repeated jobs skipped, unmet condition check ConditionPathExists=/var/lib/ubuntu-advantage/private/machine-token.json
+[   20.806167] systemd[1]: Reached target timers.target - Timer Units.
+[  OK  ] Reached target timers.target - Timer Units.
+[   20.857281] systemd[1]: Listening on dbus.socket - D-Bus System Message Bus Socket.
+[  OK  ] Listening on dbus.socket - D-Bus System Message Bus Socket.
+[   20.915976] systemd[1]: Listening on sshd-unix-local.socket - OpenSSH Server Socket (systemd-ssh-generator, AF_UNIX Local).
+[  OK  ] Listening on sshd-unix-local.socke…temd-ssh-generator, AF_UNIX Local).
+[   20.977198] systemd[1]: Listening on systemd-hostnamed.socket - Hostname Service Socket.
+[  OK  ] Listening on systemd-hostnamed.socket - Hostname Service Socket.
+[   21.027136] systemd[1]: Listening on systemd-logind-varlink.socket - User Login Management Varlink Socket.
+[  OK  ] Listening on systemd-logind-varlin…er Login Management Varlink Socket.
+[   21.076859] systemd[1]: Reached target sockets.target - Socket Units.
+[  OK  ] Reached target sockets.target - Socket Units.
+[   21.127118] systemd[1]: systemd-pcrphase-sysinit.service - TPM PCR Barrier (Initialization) skipped, unmet condition check ConditionSecurity=measured-uki
+[   21.142610] systemd[1]: Reached target basic.target - Basic System.
+[  OK  ] Reached target basic.target - Basic System.
+[   21.187475] systemd[1]: System is tainted: unmerged-bin:old-kernel
+[   21.222856] systemd[1]: chrony.service: Failed to spawn executor: Function not implemented
+[   21.232236] systemd[1]: chrony.service: Failed to spawn 'start' task: Function not implemented
+[   21.242356] systemd[1]: chrony.service: Failed with result 'resources'.
+[   21.258156] systemd[1]: Failed to start chrony.service - chrony, an NTP client/server.
+[FAILED] Failed to start chrony.service - chrony, an NTP client/server.
+See 'systemctl status chrony.service' for details.
+[   21.367488] systemd[1]: cron.service: Failed to spawn executor: Function not implemented
+[   21.376616] systemd[1]: cron.service: Failed to spawn 'start' task: Function not implemented
+[   21.386113] systemd[1]: cron.service: Failed with result 'resources'.
+[   21.401875] systemd[1]: Failed to start cron.service - Regular background program processing daemon.
+[FAILED] Failed to start cron.service - Reg…ckground program processing daemon.
+See 'systemctl status cron.service' for details.
+[   21.512058] systemd[1]: dbus.service: Failed to spawn executor: Function not implemented
+[   21.521294] systemd[1]: dbus.service: Failed to spawn 'start' task: Function not implemented
+[   21.531233] systemd[1]: dbus.service: Failed with result 'resources'.
+[   21.546883] systemd[1]: Failed to start dbus.service - D-Bus System Message Bus.
+[FAILED] Failed to start dbus.service - D-Bus System Message Bus.
+See 'systemctl status dbus.service' for details.
+[   21.662024] systemd[1]: dmesg.service: Failed to spawn executor: Function not implemented
+[   21.671305] systemd[1]: dmesg.service: Failed to spawn 'start-pre' task: Function not implemented
+[   21.681277] systemd[1]: dmesg.service: Failed with result 'resources'.
+[   21.697038] systemd[1]: Failed to start dmesg.service - Save initial kernel messages after boot.
+[FAILED] Failed to start dmesg.service - Sa…initial kernel messages after boot.
+See 'systemctl status dmesg.service' for details.
+[   21.803284] systemd[1]: e2scrub_reap.service: Failed to spawn executor: Function not implemented
+[   21.813324] systemd[1]: e2scrub_reap.service: Failed to spawn 'start' task: Function not implemented
+[   21.824044] systemd[1]: e2scrub_reap.service: Failed with result 'resources'.
+[   21.840438] systemd[1]: Failed to start e2scrub_reap.service - Remove Stale Online ext4 Metadata Check Snapshots.
+[FAILED] Failed to start e2scrub_reap.servi…line ext4 Metadata Check Snapshots.
+See 'systemctl status e2scrub_reap.service' for details.
+[   21.957370] systemd[1]: getty-static.service - getty on tty2-tty6 if dbus and logind are not available skipped, unmet condition check ConditionPathExists=!/usr/bin/dbus-daemon
+[   21.998644] systemd[1]: networkd-dispatcher.service: Failed to spawn executor: Function not implemented
+[   22.009330] systemd[1]: networkd-dispatcher.service: Failed to spawn 'start' task: Function not implemented
+[   22.020751] systemd[1]: networkd-dispatcher.service: Failed with result 'resources'.
+[   22.037756] systemd[1]: Failed to start networkd-dispatcher.service - Dispatcher daemon for systemd-networkd.
+[FAILED] Failed to start networkd-dispatche…atcher daemon for systemd-networkd.
+See 'systemctl status networkd-dispatcher.service' for details.
+[   22.152450] systemd[1]: rsyslog.service: Failed to spawn executor: Function not implemented
+[   22.161999] systemd[1]: rsyslog.service: Failed to spawn 'start-pre' task: Function not implemented
+[   22.172154] systemd[1]: rsyslog.service: Failed with result 'resources'.
+[   22.188115] systemd[1]: Failed to start rsyslog.service - System Logging Service.
+[FAILED] Failed to start rsyslog.service - System Logging Service.
+See 'systemctl status rsyslog.service' for details.
+[   22.293581] systemd[1]: systemd-logind.service: Failed to spawn executor: Function not implemented
+[   22.303744] systemd[1]: systemd-logind.service: Failed to spawn 'start' task: Function not implemented
+[   22.314659] systemd[1]: systemd-logind.service: Failed with result 'resources'.
+[   22.331137] systemd[1]: Failed to start systemd-logind.service - User Login Management.
+[FAILED] Failed to start systemd-logind.service - User Login Management.
+See 'systemctl status systemd-logind.service' for details.
+[   22.445736] systemd[1]: systemd-pcrphase.service - TPM PCR Barrier (User) skipped, unmet condition check ConditionSecurity=measured-uki
+[   22.469534] systemd[1]: systemd-user-sessions.service: Failed to spawn executor: Function not implemented
+[   22.480347] systemd[1]: systemd-user-sessions.service: Failed to spawn 'start' task: Function not implemented
+[   22.491943] systemd[1]: systemd-user-sessions.service: Failed with result 'resources'.
+[   22.509048] systemd[1]: Failed to start systemd-user-sessions.service - Permit User Sessions.
+[FAILED] Failed to start systemd-user-sessions.service - Permit User Sessions.
+See 'systemctl status systemd-user-sessions.service' for details.
+[   22.632109] systemd[1]: setvtrgb.service: Failed to spawn executor: Function not implemented
+[   22.641725] systemd[1]: setvtrgb.service: Failed to spawn 'start' task: Function not implemented
+[   22.652063] systemd[1]: setvtrgb.service: Failed with result 'resources'.
+[   22.667945] systemd[1]: Failed to start setvtrgb.service - Set console scheme.
+[FAILED] Failed to start setvtrgb.service - Set console scheme.
+See 'systemctl status setvtrgb.service' for details.
+[   22.781523] systemd[1]: Created slice system-getty.slice - Slice /system/getty.
+[  OK  ] Created slice system-getty.slice - Slice /system/getty.
+[   22.846984] systemd[1]: getty@tty1.service: Failed to spawn executor: Function not implemented
+[   22.856732] systemd[1]: getty@tty1.service: Failed to spawn 'start' task: Function not implemented
+[   22.867259] systemd[1]: getty@tty1.service: Failed with result 'resources'.
+[   22.883284] systemd[1]: Failed to start getty@tty1.service - Getty on tty1.
+[FAILED] Failed to start getty@tty1.service - Getty on tty1.
+See 'systemctl status getty@tty1.service' for details.
+[   22.983523] systemd[1]: ua-reboot-cmds.service - Ubuntu Pro reboot cmds skipped, unmet condition check ConditionPathExists=/var/lib/ubuntu-advantage/private/machine-token.json
+[   23.001289] systemd[1]: ubuntu-advantage.service - Ubuntu Pro Background Auto Attach skipped, no trigger condition checks were met.
+[   23.268307] systemd[1]: systemd-logind.service: Scheduled restart job, restart counter is at 1.
+[   23.279870] systemd[1]: getty@tty1.service: Scheduled restart job, restart counter is at 1.
+[   23.289880] systemd[1]: systemd-udevd.service: Scheduled restart job, restart counter is at 1.
+[   23.299758] systemd[1]: systemd-journald.service: Scheduled restart job, restart counter is at 1.
+[   23.311404] systemd[1]: rsyslog.service: Scheduled restart job, restart counter is at 1.
+[   23.322107] systemd[1]: cron.service: Scheduled restart job, restart counter is at 1.
+[   23.331362] systemd[1]: tmp.mount: x-systemd.graceful-option=usrquota specified, but cannot determine availability, suppressing: Function not implemented
+[   23.356373] systemd[1]: tmp.mount: Failed to spawn executor: Function not implemented
+[   23.365271] systemd[1]: tmp.mount: Failed to spawn 'mount' task: Function not implemented
+[   23.374467] systemd[1]: tmp.mount: Failed with result 'resources'.
+[   23.389711] systemd[1]: Failed to mount tmp.mount - Temporary Directory /tmp.
+[FAILED] Failed to mount tmp.mount - Temporary Directory /tmp.
+See 'systemctl status tmp.mount' for details.
+[   23.482518] systemd[1]: systemd-journald.service: Failed to spawn executor: Function not implemented
+[   23.492882] systemd[1]: systemd-journald.service: Failed to spawn 'start' task: Function not implemented
+[   23.504059] systemd[1]: systemd-journald.service: Failed with result 'resources'.
+[   23.520764] systemd[1]: Failed to start systemd-journald.service - Journal Service.
+[FAILED] Failed to start systemd-journald.service - Journal Service.
+See 'systemctl status systemd-journald.service' for details.
+[   23.643386] systemd[1]: cron.service: Failed to spawn executor: Function not implemented
+[   23.652572] systemd[1]: cron.service: Failed to spawn 'start' task: Function not implemented
+[   23.662052] systemd[1]: cron.service: Failed with result 'resources'.
+[   23.677583] systemd[1]: Failed to start cron.service - Regular background program processing daemon.
+[FAILED] Failed to start cron.service - Reg…ckground program processing daemon.
+See 'systemctl status cron.service' for details.
+[   23.802233] systemd[1]: getty@tty1.service: Failed to spawn executor: Function not implemented
+[   23.812055] systemd[1]: getty@tty1.service: Failed to spawn 'start' task: Function not implemented
+[   23.822606] systemd[1]: getty@tty1.service: Failed with result 'resources'.
+[   23.838688] systemd[1]: Failed to start getty@tty1.service - Getty on tty1.
+[FAILED] Failed to start getty@tty1.service - Getty on tty1.
+See 'systemctl status getty@tty1.service' for details.
+[   23.943857] systemd[1]: modprobe@drm.service: Failed to spawn executor: Function not implemented
+[   23.953858] systemd[1]: modprobe@drm.service: Failed to spawn 'start' task: Function not implemented
+[   23.964601] systemd[1]: modprobe@drm.service: Failed with result 'resources'.
+[   23.980929] systemd[1]: Failed to start modprobe@drm.service - Load Kernel Module drm.
+[FAILED] Failed to start modprobe@drm.service - Load Kernel Module drm.
+See 'systemctl status modprobe@drm.service' for details.
+[   24.082324] systemd[1]: rsyslog.service: Failed to spawn executor: Function not implemented
+[   24.091935] systemd[1]: rsyslog.service: Failed to spawn 'start-pre' task: Function not implemented
+[   24.102104] systemd[1]: rsyslog.service: Failed with result 'resources'.
+[   24.118096] systemd[1]: Failed to start rsyslog.service - System Logging Service.
+[FAILED] Failed to start rsyslog.service - System Logging Service.
+See 'systemctl status rsyslog.service' for details.
+[   24.233524] systemd[1]: systemd-logind.service: Failed to spawn executor: Function not implemented
+[   24.243697] systemd[1]: systemd-logind.service: Failed to spawn 'start' task: Function not implemented
+[   24.254683] systemd[1]: systemd-logind.service: Failed with result 'resources'.
+[   24.271226] systemd[1]: Failed to start systemd-logind.service - User Login Management.
+[FAILED] Failed to start systemd-logind.service - User Login Management.
+See 'systemctl status systemd-logind.service' for details.
+[   24.385836] systemd[1]: systemd-udev-load-credentials.service: Failed to spawn executor: Function not implemented
+[   24.397520] systemd[1]: systemd-udev-load-credentials.service: Failed to spawn 'start' task: Function not implemented
+[   24.409924] systemd[1]: systemd-udev-load-credentials.service: Failed with result 'resources'.
+[   24.427845] systemd[1]: Failed to start systemd-udev-load-credentials.service - Load udev Rules from Credentials.
+[FAILED] Failed to start systemd-udev-load-…- Load udev Rules from Credentials.
+See 'systemctl status systemd-udev-load-credentials.service' for details.
+[   24.552341] systemd[1]: systemd-udevd.service: Failed to spawn executor: Function not implemented
+[   24.562482] systemd[1]: systemd-udevd.service: Failed to spawn 'start' task: Function not implemented
+[   24.573149] systemd[1]: systemd-udevd.service: Failed with result 'resources'.
+[   24.589538] systemd[1]: Failed to start systemd-udevd.service - Rule-based Manager for Device Events and Files.
+[FAILED] Failed to start systemd-udevd.serv…anager for Device Events and Files.
+See 'systemctl status systemd-udevd.service' for details.
+[   24.695528] systemd[1]: cron.service: Scheduled restart job, restart counter is at 2.
+[   24.704818] systemd[1]: systemd-udevd.service: Scheduled restart job, restart counter is at 2.
+[   24.716263] systemd[1]: getty@tty1.service: Scheduled restart job, restart counter is at 2.
+[   24.727805] systemd[1]: systemd-logind.service: Scheduled restart job, restart counter is at 2.
+[   24.739358] systemd[1]: rsyslog.service: Scheduled restart job, restart counter is at 2.
+[   24.748650] systemd[1]: systemd-journald.service: Scheduled restart job, restart counter is at 2.
+[   24.759118] systemd[1]: tmp.mount: x-systemd.graceful-option=usrquota specified, but cannot determine availability, suppressing: Function not implemented
+[   24.784166] systemd[1]: tmp.mount: Failed to spawn executor: Function not implemented
+[   24.793045] systemd[1]: tmp.mount: Failed to spawn 'mount' task: Function not implemented
+[   24.802225] systemd[1]: tmp.mount: Failed with result 'resources'.
+[   24.830160] systemd[1]: Failed to mount tmp.mount - Temporary Directory /tmp.
+[FAILED] Failed to mount tmp.mount - Temporary Directory /tmp.
+See 'systemctl status tmp.mount' for details.
+[   24.942532] systemd[1]: systemd-journald.service: Failed to spawn executor: Function not implemented
+[   24.952952] systemd[1]: systemd-journald.service: Failed to spawn 'start' task: Function not implemented
+[   24.964054] systemd[1]: systemd-journald.service: Failed with result 'resources'.
+[   24.980804] systemd[1]: Failed to start systemd-journald.service - Journal Service.
+[FAILED] Failed to start systemd-journald.service - Journal Service.
+See 'systemctl status systemd-journald.service' for details.
+[   25.092381] systemd[1]: cron.service: Failed to spawn executor: Function not implemented
+[   25.101548] systemd[1]: cron.service: Failed to spawn 'start' task: Function not implemented
+[   25.111023] systemd[1]: cron.service: Failed with result 'resources'.
+[   25.126512] systemd[1]: Failed to start cron.service - Regular background program processing daemon.
+[FAILED] Failed to start cron.service - Reg…ckground program processing daemon.
+See 'systemctl status cron.service' for details.
+[   25.232282] systemd[1]: getty@tty1.service: Failed to spawn executor: Function not implemented
+[   25.242102] systemd[1]: getty@tty1.service: Failed to spawn 'start' task: Function not implemented
+[   25.252646] systemd[1]: getty@tty1.service: Failed with result 'resources'.
+[   25.268743] systemd[1]: Failed to start getty@tty1.service - Getty on tty1.
+[FAILED] Failed to start getty@tty1.service - Getty on tty1.
+See 'systemctl status getty@tty1.service' for details.
+[   25.383893] systemd[1]: modprobe@drm.service: Failed to spawn executor: Function not implemented
+[   25.393856] systemd[1]: modprobe@drm.service: Failed to spawn 'start' task: Function not implemented
+[   25.404640] systemd[1]: modprobe@drm.service: Failed with result 'resources'.
+[   25.420952] systemd[1]: Failed to start modprobe@drm.service - Load Kernel Module drm.
+[FAILED] Failed to start modprobe@drm.service - Load Kernel Module drm.
+See 'systemctl status modprobe@drm.service' for details.
+[   25.542343] systemd[1]: rsyslog.service: Failed to spawn executor: Function not implemented
+[   25.551812] systemd[1]: rsyslog.service: Failed to spawn 'start-pre' task: Function not implemented
+[   25.561963] systemd[1]: rsyslog.service: Failed with result 'resources'.
+[   25.577961] systemd[1]: Failed to start rsyslog.service - System Logging Service.
+[FAILED] Failed to start rsyslog.service - System Logging Service.
+See 'systemctl status rsyslog.service' for details.
+[   25.683481] systemd[1]: systemd-logind.service: Failed to spawn executor: Function not implemented
+[   25.693640] systemd[1]: systemd-logind.service: Failed to spawn 'start' task: Function not implemented
+[   25.704559] systemd[1]: systemd-logind.service: Failed with result 'resources'.
+[   25.721078] systemd[1]: Failed to start systemd-logind.service - User Login Management.
+[FAILED] Failed to start systemd-logind.service - User Login Management.
+See 'systemctl status systemd-logind.service' for details.
+[   25.846030] systemd[1]: systemd-udev-load-credentials.service: Failed to spawn executor: Function not implemented
+[   25.857642] systemd[1]: systemd-udev-load-credentials.service: Failed to spawn 'start' task: Function not implemented
+[   25.870036] systemd[1]: systemd-udev-load-credentials.service: Failed with result 'resources'.
+[   25.887995] systemd[1]: Failed to start systemd-udev-load-credentials.service - Load udev Rules from Credentials.
+[FAILED] Failed to start systemd-udev-load-…- Load udev Rules from Credentials.
+See 'systemctl status systemd-udev-load-credentials.service' for details.
+[   26.012563] systemd[1]: systemd-udevd.service: Failed to spawn executor: Function not implemented
+[   26.022617] systemd[1]: systemd-udevd.service: Failed to spawn 'start' task: Function not implemented
+[   26.033264] systemd[1]: systemd-udevd.service: Failed with result 'resources'.
+[   26.049577] systemd[1]: Failed to start systemd-udevd.service - Rule-based Manager for Device Events and Files.
+[FAILED] Failed to start systemd-udevd.serv…anager for Device Events and Files.
+See 'systemctl status systemd-udevd.service' for details.
+[   26.164198] systemd[1]: systemd-udevd.service: Scheduled restart job, restart counter is at 3.
+[   26.175892] systemd[1]: getty@tty1.service: Scheduled restart job, restart counter is at 3.
+[   26.187336] systemd[1]: rsyslog.service: Scheduled restart job, restart counter is at 3.
+[   26.198229] systemd[1]: systemd-logind.service: Scheduled restart job, restart counter is at 3.
+[   26.208202] systemd[1]: systemd-journald.service: Scheduled restart job, restart counter is at 3.
+[   26.219778] systemd[1]: cron.service: Scheduled restart job, restart counter is at 3.
+[   26.229033] systemd[1]: tmp.mount: x-systemd.graceful-option=usrquota specified, but cannot determine availability, suppressing: Function not implemented
+[   26.254097] systemd[1]: tmp.mount: Failed to spawn executor: Function not implemented
+[   26.263170] systemd[1]: tmp.mount: Failed to spawn 'mount' task: Function not implemented
+[   26.272356] systemd[1]: tmp.mount: Failed with result 'resources'.
+[   26.287668] systemd[1]: Failed to mount tmp.mount - Temporary Directory /tmp.
+[FAILED] Failed to mount tmp.mount - Temporary Directory /tmp.
+See 'systemctl status tmp.mount' for details.
+[   26.392525] systemd[1]: systemd-journald.service: Failed to spawn executor: Function not implemented
+[   26.402932] systemd[1]: systemd-journald.service: Failed to spawn 'start' task: Function not implemented
+[   26.414040] systemd[1]: systemd-journald.service: Failed with result 'resources'.
+[   26.430851] systemd[1]: Failed to start systemd-journald.service - Journal Service.
+[FAILED] Failed to start systemd-journald.service - Journal Service.
+See 'systemctl status systemd-journald.service' for details.
+[   26.542322] systemd[1]: cron.service: Failed to spawn executor: Function not implemented
+[   26.551510] systemd[1]: cron.service: Failed to spawn 'start' task: Function not implemented
+[   26.561049] systemd[1]: cron.service: Failed with result 'resources'.
+[   26.576570] systemd[1]: Failed to start cron.service - Regular background program processing daemon.
+[FAILED] Failed to start cron.service - Reg…ckground program processing daemon.
+See 'systemctl status cron.service' for details.
+[   26.682322] systemd[1]: getty@tty1.service: Failed to spawn executor: Function not implemented
+[   26.692088] systemd[1]: getty@tty1.service: Failed to spawn 'start' task: Function not implemented
+[   26.702694] systemd[1]: getty@tty1.service: Failed with result 'resources'.
+[   26.718843] systemd[1]: Failed to start getty@tty1.service - Getty on tty1.
+[FAILED] Failed to start getty@tty1.service - Getty on tty1.
+See 'systemctl status getty@tty1.service' for details.
+[   26.823808] systemd[1]: modprobe@drm.service: Failed to spawn executor: Function not implemented
+[   26.833757] systemd[1]: modprobe@drm.service: Failed to spawn 'start' task: Function not implemented
+[   26.844485] systemd[1]: modprobe@drm.service: Failed with result 'resources'.
+[   26.860764] systemd[1]: Failed to start modprobe@drm.service - Load Kernel Module drm.
+[FAILED] Failed to start modprobe@drm.service - Load Kernel Module drm.
+See 'systemctl status modprobe@drm.service' for details.
+[   26.982308] systemd[1]: rsyslog.service: Failed to spawn executor: Function not implemented
+[   26.991863] systemd[1]: rsyslog.service: Failed to spawn 'start-pre' task: Function not implemented
+[   27.002024] systemd[1]: rsyslog.service: Failed with result 'resources'.
+[   27.017892] systemd[1]: Failed to start rsyslog.service - System Logging Service.
+[FAILED] Failed to start rsyslog.service - System Logging Service.
+See 'systemctl status rsyslog.service' for details.
+[   27.133568] systemd[1]: systemd-logind.service: Failed to spawn executor: Function not implemented
+[   27.143787] systemd[1]: systemd-logind.service: Failed to spawn 'start' task: Function not implemented
+[   27.154701] systemd[1]: systemd-logind.service: Failed with result 'resources'.
+[   27.171281] systemd[1]: Failed to start systemd-logind.service - User Login Management.
+[FAILED] Failed to start systemd-logind.service - User Login Management.
+See 'systemctl status systemd-logind.service' for details.
+[   27.296089] systemd[1]: systemd-udev-load-credentials.service: Failed to spawn executor: Function not implemented
+[   27.307695] systemd[1]: systemd-udev-load-credentials.service: Failed to spawn 'start' task: Function not implemented
+[   27.320152] systemd[1]: systemd-udev-load-credentials.service: Failed with result 'resources'.
+[   27.338133] systemd[1]: Failed to start systemd-udev-load-credentials.service - Load udev Rules from Credentials.
+[FAILED] Failed to start systemd-udev-load-…- Load udev Rules from Credentials.
+See 'systemctl status systemd-udev-load-credentials.service' for details.
+[   27.462505] systemd[1]: systemd-udevd.service: Failed to spawn executor: Function not implemented
+[   27.472572] systemd[1]: systemd-udevd.service: Failed to spawn 'start' task: Function not implemented
+[   27.483228] systemd[1]: systemd-udevd.service: Failed with result 'resources'.
+[   27.499569] systemd[1]: Failed to start systemd-udevd.service - Rule-based Manager for Device Events and Files.
+[FAILED] Failed to start systemd-udevd.serv…anager for Device Events and Files.
+See 'systemctl status systemd-udevd.service' for details.
+[   27.614168] systemd[1]: systemd-udevd.service: Scheduled restart job, restart counter is at 4.
+[   27.625818] systemd[1]: getty@tty1.service: Scheduled restart job, restart counter is at 4.
+[   27.637233] systemd[1]: rsyslog.service: Scheduled restart job, restart counter is at 4.
+[   27.648120] systemd[1]: systemd-logind.service: Scheduled restart job, restart counter is at 4.
+[   27.658297] systemd[1]: systemd-journald.service: Scheduled restart job, restart counter is at 4.
+[   27.669924] systemd[1]: cron.service: Scheduled restart job, restart counter is at 4.
+[   27.679186] systemd[1]: tmp.mount: x-systemd.graceful-option=usrquota specified, but cannot determine availability, suppressing: Function not implemented
+[   27.704265] systemd[1]: tmp.mount: Failed to spawn executor: Function not implemented
+[   27.713140] systemd[1]: tmp.mount: Failed to spawn 'mount' task: Function not implemented
+[   27.722319] systemd[1]: tmp.mount: Failed with result 'resources'.
+[   27.737583] systemd[1]: Failed to mount tmp.mount - Temporary Directory /tmp.
+[FAILED] Failed to mount tmp.mount - Temporary Directory /tmp.
+See 'systemctl status tmp.mount' for details.
+[   27.852596] systemd[1]: systemd-journald.service: Failed to spawn executor: Function not implemented
+[   27.862967] systemd[1]: systemd-journald.service: Failed to spawn 'start' task: Function not implemented
+[   27.874137] systemd[1]: systemd-journald.service: Failed with result 'resources'.
+[   27.890877] systemd[1]: Failed to start systemd-journald.service - Journal Service.
+[FAILED] Failed to start systemd-journald.service - Journal Service.
+See 'systemctl status systemd-journald.service' for details.
+[   28.002277] systemd[1]: cron.service: Failed to spawn executor: Function not implemented
+[   28.011535] systemd[1]: cron.service: Failed to spawn 'start' task: Function not implemented
+[   28.021017] systemd[1]: cron.service: Failed with result 'resources'.
+[   28.036506] systemd[1]: Failed to start cron.service - Regular background program processing daemon.
+[FAILED] Failed to start cron.service - Reg…ckground program processing daemon.
+See 'systemctl status cron.service' for details.
+[   28.142343] systemd[1]: getty@tty1.service: Failed to spawn executor: Function not implemented
+[   28.152179] systemd[1]: getty@tty1.service: Failed to spawn 'start' task: Function not implemented
+[   28.162717] systemd[1]: getty@tty1.service: Failed with result 'resources'.
+[   28.178902] systemd[1]: Failed to start getty@tty1.service - Getty on tty1.
+[FAILED] Failed to start getty@tty1.service - Getty on tty1.
+See 'systemctl status getty@tty1.service' for details.
+[   28.273890] systemd[1]: modprobe@drm.service: Failed to spawn executor: Function not implemented
+[   28.283900] systemd[1]: modprobe@drm.service: Failed to spawn 'start' task: Function not implemented
+[   28.294631] systemd[1]: modprobe@drm.service: Failed with result 'resources'.
+[   28.311081] systemd[1]: Failed to start modprobe@drm.service - Load Kernel Module drm.
+[FAILED] Failed to start modprobe@drm.service - Load Kernel Module drm.
+See 'systemctl status modprobe@drm.service' for details.
+[   28.422295] systemd[1]: rsyslog.service: Failed to spawn executor: Function not implemented
+[   28.431843] systemd[1]: rsyslog.service: Failed to spawn 'start-pre' task: Function not implemented
+[   28.442001] systemd[1]: rsyslog.service: Failed with result 'resources'.
+[   28.457943] systemd[1]: Failed to start rsyslog.service - System Logging Service.
+[FAILED] Failed to start rsyslog.service - System Logging Service.
+See 'systemctl status rsyslog.service' for details.
+[   28.563475] systemd[1]: systemd-logind.service: Failed to spawn executor: Function not implemented
+[   28.573701] systemd[1]: systemd-logind.service: Failed to spawn 'start' task: Function not implemented
+[   28.584639] systemd[1]: systemd-logind.service: Failed with result 'resources'.
+[   28.601224] systemd[1]: Failed to start systemd-logind.service - User Login Management.
+[FAILED] Failed to start systemd-logind.service - User Login Management.
+See 'systemctl status systemd-logind.service' for details.
+[   28.726065] systemd[1]: systemd-udev-load-credentials.service: Failed to spawn executor: Function not implemented
+[   28.737670] systemd[1]: systemd-udev-load-credentials.service: Failed to spawn 'start' task: Function not implemented
+[   28.750077] systemd[1]: systemd-udev-load-credentials.service: Failed with result 'resources'.
+[   28.768042] systemd[1]: Failed to start systemd-udev-load-credentials.service - Load udev Rules from Credentials.
+[FAILED] Failed to start systemd-udev-load-…- Load udev Rules from Credentials.
+See 'systemctl status systemd-udev-load-credentials.service' for details.
+[   28.892476] systemd[1]: systemd-udevd.service: Failed to spawn executor: Function not implemented
+[   28.902597] systemd[1]: systemd-udevd.service: Failed to spawn 'start' task: Function not implemented
+[   28.913250] systemd[1]: systemd-udevd.service: Failed with result 'resources'.
+[   28.929662] systemd[1]: Failed to start systemd-udevd.service - Rule-based Manager for Device Events and Files.
+[FAILED] Failed to start systemd-udevd.serv…anager for Device Events and Files.
+See 'systemctl status systemd-udevd.service' for details.
+[   29.044185] systemd[1]: systemd-udevd.service: Scheduled restart job, restart counter is at 5.
+[   29.055867] systemd[1]: getty@tty1.service: Scheduled restart job, restart counter is at 5.
+[   29.067368] systemd[1]: rsyslog.service: Scheduled restart job, restart counter is at 5.
+[   29.078239] systemd[1]: systemd-logind.service: Scheduled restart job, restart counter is at 5.
+[   29.088348] systemd[1]: systemd-journald.service: Scheduled restart job, restart counter is at 5.
+[   29.100008] systemd[1]: cron.service: Scheduled restart job, restart counter is at 5.
+[   29.109272] systemd[1]: tmp.mount: x-systemd.graceful-option=usrquota specified, but cannot determine availability, suppressing: Function not implemented
+[   29.134356] systemd[1]: tmp.mount: Failed to spawn executor: Function not implemented
+[   29.143239] systemd[1]: tmp.mount: Failed to spawn 'mount' task: Function not implemented
+[   29.152417] systemd[1]: tmp.mount: Failed with result 'resources'.
+[   29.167660] systemd[1]: Failed to mount tmp.mount - Temporary Directory /tmp.
+[FAILED] Failed to mount tmp.mount - Temporary Directory /tmp.
+See 'systemctl status tmp.mount' for details.
+[   29.272680] systemd[1]: systemd-journald.service: Failed to spawn executor: Function not implemented
+[   29.283031] systemd[1]: systemd-journald.service: Failed to spawn 'start' task: Function not implemented
+[   29.294140] systemd[1]: systemd-journald.service: Failed with result 'resources'.
+[   29.310814] systemd[1]: Failed to start systemd-journald.service - Journal Service.
+[FAILED] Failed to start systemd-journald.service - Journal Service.
+See 'systemctl status systemd-journald.service' for details.
+[   29.422267] systemd[1]: cron.service: Start request repeated too quickly.
+[   29.429930] systemd[1]: cron.service: Failed with result 'resources'.
+[   29.437408] systemd[1]: Failed to start cron.service - Regular background program processing daemon.
+[FAILED] Failed to start cron.service - Reg…ckground program processing daemon.
+See 'systemctl status cron.service' for details.
+[   29.552067] systemd[1]: getty@tty1.service: Start request repeated too quickly.
+[   29.560306] systemd[1]: getty@tty1.service: Failed with result 'resources'.
+[   29.568302] systemd[1]: Failed to start getty@tty1.service - Getty on tty1.
+[FAILED] Failed to start getty@tty1.service - Getty on tty1.
+See 'systemctl status getty@tty1.service' for details.
+[   29.673490] systemd[1]: modprobe@drm.service: Failed to spawn executor: Function not implemented
+[   29.683439] systemd[1]: modprobe@drm.service: Failed to spawn 'start' task: Function not implemented
+[   29.694165] systemd[1]: modprobe@drm.service: Failed with result 'resources'.
+[   29.710442] systemd[1]: Failed to start modprobe@drm.service - Load Kernel Module drm.
+[FAILED] Failed to start modprobe@drm.service - Load Kernel Module drm.
+See 'systemctl status modprobe@drm.service' for details.
+[   29.832296] systemd[1]: rsyslog.service: Start request repeated too quickly.
+[   29.840255] systemd[1]: rsyslog.service: Failed with result 'resources'.
+[   29.847947] systemd[1]: Failed to start rsyslog.service - System Logging Service.
+[FAILED] Failed to start rsyslog.service - System Logging Service.
+See 'systemctl status rsyslog.service' for details.
+[   29.936782] systemd[1]: syslog.socket: Failed with result 'service-start-limit-hit'.
+[   29.976097] systemd[1]: systemd-logind.service: Start request repeated too quickly.
+[   29.984723] systemd[1]: systemd-logind.service: Failed with result 'resources'.
+[   29.993090] systemd[1]: Failed to start systemd-logind.service - User Login Management.
+[FAILED] Failed to start systemd-logind.service - User Login Management.
+See 'systemctl status systemd-logind.service' for details.
+[   30.086878] systemd[1]: systemd-logind-varlink.socket: Failed with result 'service-start-limit-hit'.
+[   30.137909] systemd[1]: systemd-udev-load-credentials.service: Failed to spawn executor: Function not implemented
+[   30.149522] systemd[1]: systemd-udev-load-credentials.service: Failed to spawn 'start' task: Function not implemented
+[   30.161890] systemd[1]: systemd-udev-load-credentials.service: Failed with result 'resources'.
+[   30.179837] systemd[1]: Failed to start systemd-udev-load-credentials.service - Load udev Rules from Credentials.
+[FAILED] Failed to start systemd-udev-load-…- Load udev Rules from Credentials.
+See 'systemctl status systemd-udev-load-credentials.service' for details.
+[   30.282518] systemd[1]: systemd-udevd.service: Failed to spawn executor: Function not implemented
+[   30.292584] systemd[1]: systemd-udevd.service: Failed to spawn 'start' task: Function not implemented
+[   30.303310] systemd[1]: systemd-udevd.service: Failed with result 'resources'.
+[   30.319732] systemd[1]: Failed to start systemd-udevd.service - Rule-based Manager for Device Events and Files.
+[FAILED] Failed to start systemd-udevd.serv…anager for Device Events and Files.
+See 'systemctl status systemd-udevd.service' for details.
+[   30.412784] systemd[1]: systemd-journald.service: Scheduled restart job, restart counter is at 6.
+[   30.423170] systemd[1]: systemd-udevd.service: Scheduled restart job, restart counter is at 6.
+[   30.443399] systemd[1]: systemd-journald.service: Failed to spawn executor: Function not implemented
+[   30.453762] systemd[1]: systemd-journald.service: Failed to spawn 'start' task: Function not implemented
+[   30.464885] systemd[1]: systemd-journald.service: Failed with result 'resources'.
+[   30.481569] systemd[1]: Failed to start systemd-journald.service - Journal Service.
+[FAILED] Failed to start systemd-journald.service - Journal Service.
+See 'systemctl status systemd-journald.service' for details.
+[   30.592245] systemd[1]: systemd-udev-load-credentials.service: Failed to spawn executor: Function not implemented
+[   30.603843] systemd[1]: systemd-udev-load-credentials.service: Failed to spawn 'start' task: Function not implemented
+[   30.616243] systemd[1]: systemd-udev-load-credentials.service: Failed with result 'resources'.
+[   30.634140] systemd[1]: Failed to start systemd-udev-load-credentials.service - Load udev Rules from Credentials.
+[FAILED] Failed to start systemd-udev-load-…- Load udev Rules from Credentials.
+See 'systemctl status systemd-udev-load-credentials.service' for details.
+[   30.752338] systemd[1]: systemd-udevd.service: Failed to spawn executor: Function not implemented
+[   30.762461] systemd[1]: systemd-udevd.service: Failed to spawn 'start' task: Function not implemented
+[   30.773129] systemd[1]: systemd-udevd.service: Failed with result 'resources'.
+[   30.789524] systemd[1]: Failed to start systemd-udevd.service - Rule-based Manager for Device Events and Files.
+[FAILED] Failed to start systemd-udevd.serv…anager for Device Events and Files.
+See 'systemctl status systemd-udevd.service' for details.
+[   30.902649] systemd[1]: systemd-journald.service: Scheduled restart job, restart counter is at 7.
+[   30.913112] systemd[1]: systemd-udevd.service: Scheduled restart job, restart counter is at 7.
+[   30.933205] systemd[1]: systemd-journald.service: Failed to spawn executor: Function not implemented
+[   30.943566] systemd[1]: systemd-journald.service: Failed to spawn 'start' task: Function not implemented
+[   30.954675] systemd[1]: systemd-journald.service: Failed with result 'resources'.
+[   30.971348] systemd[1]: Failed to start systemd-journald.service - Journal Service.
+[FAILED] Failed to start systemd-journald.service - Journal Service.
+See 'systemctl status systemd-journald.service' for details.
+[   31.092230] systemd[1]: systemd-udev-load-credentials.service: Failed to spawn executor: Function not implemented
+[   31.103894] systemd[1]: systemd-udev-load-credentials.service: Failed to spawn 'start' task: Function not implemented
+[   31.116257] systemd[1]: systemd-udev-load-credentials.service: Failed with result 'resources'.
+[   31.134255] systemd[1]: Failed to start systemd-udev-load-credentials.service - Load udev Rules from Credentials.
+[FAILED] Failed to start systemd-udev-load-…- Load udev Rules from Credentials.
+See 'systemctl status systemd-udev-load-credentials.service' for details.
+[   31.252328] systemd[1]: systemd-udevd.service: Failed to spawn executor: Function not implemented
+[   31.262472] systemd[1]: systemd-udevd.service: Failed to spawn 'start' task: Function not implemented
+[   31.273121] systemd[1]: systemd-udevd.service: Failed with result 'resources'.
+[   31.289484] systemd[1]: Failed to start systemd-udevd.service - Rule-based Manager for Device Events and Files.
+[FAILED] Failed to start systemd-udevd.serv…anager for Device Events and Files.
+See 'systemctl status systemd-udevd.service' for details.
+[   31.392733] systemd[1]: systemd-journald.service: Scheduled restart job, restart counter is at 8.
+[   31.403109] systemd[1]: systemd-udevd.service: Scheduled restart job, restart counter is at 8.
+[   31.412849] systemd[1]: systemd-journald.service: Start request repeated too quickly.
+[   31.421634] systemd[1]: systemd-journald.service: Failed with result 'resources'.
+[   31.430176] systemd[1]: Failed to start systemd-journald.service - Journal Service.
+[FAILED] Failed to start systemd-journald.service - Journal Service.
+See 'systemctl status systemd-journald.service' for details.
+[   31.526805] systemd[1]: systemd-journald-dev-log.socket: Failed with result 'service-start-limit-hit'.
+[   31.552514] systemd[1]: systemd-journald.socket: Failed with result 'service-start-limit-hit'.
+[   31.602791] systemd[1]: systemd-udev-load-credentials.service: Failed to spawn executor: Function not implemented
+[   31.614407] systemd[1]: systemd-udev-load-credentials.service: Failed to spawn 'start' task: Function not implemented
+[   31.626891] systemd[1]: systemd-udev-load-credentials.service: Failed with result 'resources'.
+[   31.644742] systemd[1]: Failed to start systemd-udev-load-credentials.service - Load udev Rules from Credentials.
+[FAILED] Failed to start systemd-udev-load-…- Load udev Rules from Credentials.
+See 'systemctl status systemd-udev-load-credentials.service' for details.
+[   31.762429] systemd[1]: systemd-udevd.service: Failed to spawn executor: Function not implemented
+[   31.772552] systemd[1]: systemd-udevd.service: Failed to spawn 'start' task: Function not implemented
+[   31.783223] systemd[1]: systemd-udevd.service: Failed with result 'resources'.
+[   31.799715] systemd[1]: Failed to start systemd-udevd.service - Rule-based Manager for Device Events and Files.
+[FAILED] Failed to start systemd-udevd.serv…anager for Device Events and Files.
+See 'systemctl status systemd-udevd.service' for details.
+[   31.912797] systemd[1]: systemd-udevd.service: Scheduled restart job, restart counter is at 9.
+[   31.932506] systemd[1]: systemd-udev-load-credentials.service: Failed to spawn executor: Function not implemented
+[   31.944185] systemd[1]: systemd-udev-load-credentials.service: Failed to spawn 'start' task: Function not implemented
+[   31.956597] systemd[1]: systemd-udev-load-credentials.service: Failed with result 'resources'.
+[   31.974454] systemd[1]: Failed to start systemd-udev-load-credentials.service - Load udev Rules from Credentials.
+[FAILED] Failed to start systemd-udev-load-…- Load udev Rules from Credentials.
+See 'systemctl status systemd-udev-load-credentials.service' for details.
+[   32.082525] systemd[1]: systemd-udevd.service: Failed to spawn executor: Function not implemented
+[   32.092599] systemd[1]: systemd-udevd.service: Failed to spawn 'start' task: Function not implemented
+[   32.103273] systemd[1]: systemd-udevd.service: Failed with result 'resources'.
+[   32.119781] systemd[1]: Failed to start systemd-udevd.service - Rule-based Manager for Device Events and Files.
+[FAILED] Failed to start systemd-udevd.serv…anager for Device Events and Files.
+See 'systemctl status systemd-udevd.service' for details.
+[   32.232761] systemd[1]: systemd-udevd.service: Scheduled restart job, restart counter is at 10.
+[   32.242729] systemd[1]: systemd-udev-load-credentials.service: Start request repeated too quickly.
+[   32.252785] systemd[1]: systemd-udev-load-credentials.service: Failed with result 'resources'.
+[   32.262598] systemd[1]: Failed to start systemd-udev-load-credentials.service - Load udev Rules from Credentials.
+[FAILED] Failed to start systemd-udev-load-…- Load udev Rules from Credentials.
+See 'systemctl status systemd-udev-load-credentials.service' for details.
+[   32.371853] systemd[1]: systemd-udevd.service: Start request repeated too quickly.
+[   32.380380] systemd[1]: systemd-udevd.service: Failed with result 'resources'.
+[   32.388649] systemd[1]: Failed to start systemd-udevd.service - Rule-based Manager for Device Events and Files.
+[FAILED] Failed to start systemd-udevd.serv…anager for Device Events and Files.
+See 'systemctl status systemd-udevd.service' for details.
+[   32.486777] systemd[1]: systemd-udevd-kernel.socket: Failed with result 'service-start-limit-hit'.
+[   32.512126] systemd[1]: systemd-udevd-control.socket: Failed with result 'service-start-limit-hit'.
+[   32.537643] systemd[1]: systemd-udevd-varlink.socket: Failed with result 'service-start-limit-hit'.
+[   ***] Job dev-ttyS2.device/start running (38s / 1min 31s)
+
